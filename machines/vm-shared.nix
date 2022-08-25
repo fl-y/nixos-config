@@ -68,7 +68,7 @@
       lightdm.enable = true;
 
       # autoLogin.enable = true;
-      # autoLogin.user = "cor";
+      # autoLogin.user = "aeryz";
       sessionCommands = ''
         eval $(/run/wrappers/bin/gnome-keyring-daemon --start --daemonize) 
         export SSH_AUTH_SOCK

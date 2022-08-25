@@ -1,5 +1,5 @@
 {
-  description = "NixOS systems and tools by cor";
+  description = "NixOS systems and tools by aeryz";
 
   inputs = {
     # Pin our primary nixpkgs repository. This is the main nixpkgs repository
@@ -52,7 +52,7 @@
         inherit nixpkgs home-manager;
         # nixpkgs = inputs.nixpkgs-old-kernel;
         system = "aarch64-linux";
-        user = "cor";
+        user = "aeryz";
 
         overlays = [
           (final: prev: {
@@ -90,19 +90,19 @@
       nixosConfigurations.vm-aarch64-prl = mkVM "vm-aarch64-prl" rec {
         inherit overlays nixpkgs home-manager;
         system = "aarch64-linux";
-        user = "cor";
+        user = "aeryz";
       };
 
       nixosConfigurations.vm-aarch64-utm = mkVM "vm-aarch64-utm" rec {
         inherit overlays nixpkgs home-manager;
         system = "aarch64-linux";
-        user = "cor";
+        user = "aeryz";
       };
 
       nixosConfigurations.vm-intel = mkVM "vm-intel" rec {
         inherit nixpkgs home-manager overlays;
         system = "x86_64-linux";
-        user = "cor";
+        user = "aeryz";
       };
     };
 }

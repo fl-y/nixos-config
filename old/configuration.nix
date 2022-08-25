@@ -4,34 +4,6 @@
 
 { config, pkgs, ... }:
 let
-  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/master.tar.gz";
-  discord-chromium = pkgs.makeDesktopItem rec {
-    name = "Discord";
-    desktopName = "Discord";
-    genericName = "All-in-one cross-platform voice and text chat for gamers";
-    exec = "${pkgs.chromium}/bin/chromium --app=\"https://discord.com/channels/@me\"";
-    icon = "discord";
-    type = "Application";
-    terminal = false;
-  };
-  slack-chromium = pkgs.makeDesktopItem rec {
-    name = "Slack";
-    desktopName = "Slack";
-    genericName = "One platform for your team and your work";
-    exec = "${pkgs.chromium}/bin/chromium --app=\"https://app.slack.com/client/T021F0XJ8BE/C02MSA16DCP\"";
-    icon = "slack";
-    type = "Application";
-    terminal = false;
-  };
-  clickup-chromium = pkgs.makeDesktopItem rec {
-    name = "ClickUp";
-    desktopName = "ClickUp";
-    genericName = "One app to replace them all";
-    exec = "${pkgs.chromium}/bin/chromium --app=\"https://app.clickup.com/\"";
-    icon = "clickup";
-    type = "Application";
-    terminal = false;
-  };
 in
 {
   imports =
@@ -164,7 +136,7 @@ in
   virtualisation.vmware.guest.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.3
-  users.users.cor = {
+  users.users.aeryz = {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
   };
@@ -197,14 +169,11 @@ in
     zip
     fzf
     openssh
-    clickup-chromium
-    discord-chromium
-    slack-chromium
     feh
     tdesktop
     pavucontrol # enable microphone
     (writeShellScriptBin "feh-bg-fill" ''
-      feh --bg-fill /home/cor/.background-image
+      feh --bg-fill /home/aeryz/.background-image
     '')
     (writeShellScriptBin "xr-mbp" ''
       xrandr --newmode "3024x1890_60.00"  488.50  3024 3264 3592 4160  1890 1893 1899 1958 -hsync +vsync
@@ -259,19 +228,19 @@ in
        sudo NIXPKGS_ALLOW_UNSUPPORTED_SYSTEM=1 nixos-rebuild switch
     '')
     (writeShellScriptBin "composable-code" ''
-      cd /home/cor/composable
+      cd /home/aeryz/composable
       nix develop ".#main" --command code .
     '')
     (writeShellScriptBin "rentiv-code" ''
-      cd /home/cor/rentiv
+      cd /home/aeryz/rentiv
       nix develop --command code .
     '')
     (writeShellScriptBin "rentiv-code-site" ''
-      cd /home/cor/rentiv
+      cd /home/aeryz/rentiv
       nix develop --command code ./site
     '')
     (writeShellScriptBin "nixos-config-code" ''
-      cd /home/cor/nixos-config
+      cd /home/aeryz/nixos-config
       code .
     '')
   ];

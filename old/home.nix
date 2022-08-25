@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 
 {
-  home-manager.users.cor = {
+  home-manager.users.aeryz = {
     home.file.".background-image".source = ./wallpapers/purple.png;
 
     gtk = {
@@ -14,8 +14,8 @@
 
     programs.git = {
       enable = true;
-      userName = "cor";
-      userEmail = "cor@pruijs.dev";
+      userName = "aeryz";
+      userEmail = "abdullaheryz@protonmail.com";
       lfs.enable = true;
       signing = {
         signByDefault = true;
