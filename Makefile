@@ -1,7 +1,7 @@
 # Connectivity info for Linux VM
 NIXADDR ?= unset
 NIXPORT ?= 22
-NIXUSER ?= aeryz
+NIXUSER ?= joon
 
 # The block device prefix to use.
 #   - sda for SATA/IDE

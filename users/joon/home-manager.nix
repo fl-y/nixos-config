@@ -48,7 +48,7 @@ in
     lazygit
     element-desktop
     (writeShellScriptBin "feh-bg-fill" ''
-      feh --bg-fill /home/aeryz/.background-image
+      feh --bg-fill /home/joon/.background-image
     '')
   ];
 
@@ -121,8 +121,8 @@ in
 
   programs.git = {
     enable = true;
-    userName = "aeryz";
-    userEmail = "abdullaheryz@protonmail.com";
+    userName = "joon";
+    userEmail = "thedigitalimg@gmail.com";
     lfs.enable = true;
     signing = {
       signByDefault = true;
@@ -133,7 +133,7 @@ in
       color.ui = true;
       # core.askPass = ""; # needs to be empty to use terminal for ask pass
       # credential.helper = "store"; # want to make this more secure
-      github.user = "aeryz";
+      github.user = "joon";
       # push.default = "tracking";
       # init.defaultBranch = "main";
     };

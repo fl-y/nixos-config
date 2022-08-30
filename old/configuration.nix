@@ -136,7 +136,7 @@ in
   virtualisation.vmware.guest.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.3
-  users.users.aeryz = {
+  users.users.joon = {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
   };
@@ -173,7 +173,7 @@ in
     tdesktop
     pavucontrol # enable microphone
     (writeShellScriptBin "feh-bg-fill" ''
-      feh --bg-fill /home/aeryz/.background-image
+      feh --bg-fill /home/joon/.background-image
     '')
     (writeShellScriptBin "xr-mbp" ''
       xrandr --newmode "3024x1890_60.00"  488.50  3024 3264 3592 4160  1890 1893 1899 1958 -hsync +vsync
@@ -228,19 +228,19 @@ in
        sudo NIXPKGS_ALLOW_UNSUPPORTED_SYSTEM=1 nixos-rebuild switch
     '')
     (writeShellScriptBin "composable-code" ''
-      cd /home/aeryz/composable
+      cd /home/joon/composable
       nix develop ".#main" --command code .
     '')
     (writeShellScriptBin "rentiv-code" ''
-      cd /home/aeryz/rentiv
+      cd /home/joon/rentiv
       nix develop --command code .
     '')
     (writeShellScriptBin "rentiv-code-site" ''
-      cd /home/aeryz/rentiv
+      cd /home/joon/rentiv
       nix develop --command code ./site
     '')
     (writeShellScriptBin "nixos-config-code" ''
-      cd /home/aeryz/nixos-config
+      cd /home/joon/nixos-config
       code .
     '')
   ];

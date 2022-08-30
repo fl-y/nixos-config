@@ -38,14 +38,14 @@
     VISUAL = "hx";
   };
   
-  users.users.aeryz = {
+  users.users.joon = {
     isNormalUser = true;
-    home = "/home/aeryz";
+    home = "/home/joon";
     extraGroups = [ "docker" "wheel" "podman"];
     shell = pkgs.zsh;
-    hashedPassword = "$6$y$Jp96eqPW/MRGePaNQTMcZeC/eLenL61OdEIrac41efbXvBFtlAgSKoHwT3rKnUw/dHKDyTOOkyuOp2W/12CHf0";
+    hashedPassword = "$6$asd$0/6GQ5GeBmXwBVvAEkOo./DNr4.bUzCr3FdcMDyRaNmBjdSi6lMMl6tDICpvNgbPSeLe9MA/sQEyxjcYM5So./";
     openssh.authorizedKeys.keys = [
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOJRqAeEhUcBeuj/giqHR9yJj96shoXz+wuwGTfbors3 abdullaheryz@protonmail.com"
+      "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDal75ZpnytYihaPqLoDKLjpfS1GBkveg3HL50aWo2kSspsXHAZW5jG2LpaN2fWb/UlOwGGLpCZCDs2UFEEyB+bRCjJWwVMj58lCDb0MpMwILGZluSPsJ8PHmVCrIQyBTE$"
     ];
   };
 }
