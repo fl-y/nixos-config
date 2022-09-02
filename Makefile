@@ -60,8 +60,8 @@ vm/bootstrap0:
 # after bootstrap0, run this to finalize. After this, do everything else
 # in the VM unless secrets change.
 vm/bootstrap:
-	#NIXUSER=root $(MAKE) vm/copy
-	#NIXUSER=root $(MAKE) vm/switch
+	NIXUSER=root $(MAKE) vm/copy
+	NIXUSER=root $(MAKE) vm/switch
 	$(MAKE) vm/secrets
 	ssh $(SSH_OPTIONS) -p$(NIXPORT) $(NIXUSER)@$(NIXADDR) " \
 		sudo reboot; \

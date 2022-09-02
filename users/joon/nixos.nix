@@ -45,7 +45,7 @@
     shell = pkgs.zsh;
     hashedPassword = "$6$asd$0/6GQ5GeBmXwBVvAEkOo./DNr4.bUzCr3FdcMDyRaNmBjdSi6lMMl6tDICpvNgbPSeLe9MA/sQEyxjcYM5So./";
     openssh.authorizedKeys.keys = [
-      "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDal75ZpnytYihaPqLoDKLjpfS1GBkveg3HL50aWo2kSspsXHAZW5jG2LpaN2fWb/UlOwGGLpCZCDs2UFEEyB+bRCjJWwVMj58lCDb0MpMwILGZluSPsJ8PHmVCrIQyBTE$"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAJpS4zCMeOKKAIWk5LhBEkJ8ADFYkTsG9BtkUokpePW thedigitalimg@gmail.com"
     ];
   };
 }
